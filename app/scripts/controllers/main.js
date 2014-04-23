@@ -89,7 +89,7 @@ angular.module('golfinatorApp')
       return $sce.trustAsResourceUrl(url);
     };
     $scope.issGoogleMapsUrl = function(latitude,longitude) {
-      var url = 'https://maps.google.com/maps?q=' + latitude + ',' + longitude + '&hl=es;z=9&output=embed';
+      var url = 'https://maps.google.com/maps?q=' + latitude + ',' + longitude + '&hl=es&z=5&output=embed';
       return $scope.trust(url);
     };
   });
