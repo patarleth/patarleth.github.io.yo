@@ -4,10 +4,25 @@
   </p>
   <div ng-show="forcast">
     {{geo.geobytescity}} - {{forcast.daily.summary}}<br />
-    <span ng-show="mashup">mashup - {{mashup}}</span><br />
     Powered by <a href="http://forecast.io/">Forecast</a>, <a href="http://geobytes.com">Geobytes</a> and <a href="https://words.bighugelabs.com/">Big Huge Thesaurus</a>
   </div>
   <br />
+
+  <div ng-show="iss_weather_forcast">
+    weather forecast under the international space station - <p>{{iss_weather_forcast.daily.summary}}</p>
+    <iframe width="300" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{issGoogleMapsUrl(iss_position.latitude, iss_position.longitude)}}"></iframe><br /><small><a href="{{issGoogleMapsUrl(iss_position.latitude, iss_position.longitude)}}" style="color:#0000FF;text-align:left" target="_blank">See map bigger</a></small>
+  </div>
+
+  <div ng-show="peopleinspace">
+    <p>
+      PEOPLE IN SPAAAAAAAACE!!!!!!
+    </p>
+
+    <ul ng-repeat="p in peopleinspace.people">
+      <li>{{p.name}} - {{p.craft}}</li>
+    </ul>
+  </div>
+
   <div ng-show="feednow">
 
     <p>
